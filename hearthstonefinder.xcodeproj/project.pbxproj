@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */; };
+		A7FE55331BEFFE2700ABC506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55321BEFFE2700ABC506 /* ViewController.swift */; };
+		A7FE55361BEFFE2700ABC506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE55341BEFFE2700ABC506 /* Main.storyboard */; };
+		A7FE55391BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */; };
+		A7FE553B1BEFFE2700ABC506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */; };
+		A7FE553E1BEFFE2700ABC506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE553C1BEFFE2700ABC506 /* LaunchScreen.storyboard */; };
+		A7FE55491BEFFE2700ABC506 /* hearthstonefinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55481BEFFE2700ABC506 /* hearthstonefinderTests.swift */; };
+		A7FE55541BEFFE2700ABC506 /* hearthstonefinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55531BEFFE2700ABC506 /* hearthstonefinderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7FE55451BEFFE2700ABC506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7FE55251BEFFE2700ABC506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7FE552C1BEFFE2700ABC506;
+			remoteInfo = hearthstonefinder;
+		};
+		A7FE55501BEFFE2700ABC506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7FE55251BEFFE2700ABC506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7FE552C1BEFFE2700ABC506;
+			remoteInfo = hearthstonefinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A7FE552D1BEFFE2700ABC506 /* hearthstonefinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hearthstonefinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7FE55321BEFFE2700ABC506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7FE55351BEFFE2700ABC506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A7FE55381BEFFE2700ABC506 /* hearthstonefinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hearthstonefinder.xcdatamodel; sourceTree = "<group>"; };
+		A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7FE553D1BEFFE2700ABC506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7FE553F1BEFFE2700ABC506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FE55441BEFFE2700ABC506 /* hearthstonefinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hearthstonefinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FE55481BEFFE2700ABC506 /* hearthstonefinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hearthstonefinderTests.swift; sourceTree = "<group>"; };
+		A7FE554A1BEFFE2700ABC506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FE554F1BEFFE2700ABC506 /* hearthstonefinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hearthstonefinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FE55531BEFFE2700ABC506 /* hearthstonefinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hearthstonefinderUITests.swift; sourceTree = "<group>"; };
+		A7FE55551BEFFE2700ABC506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7FE552A1BEFFE2700ABC506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FE55411BEFFE2700ABC506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FE554C1BEFFE2700ABC506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7FE55241BEFFE2700ABC506 = {
+			isa = PBXGroup;
+			children = (
+				A7FE552F1BEFFE2700ABC506 /* hearthstonefinder */,
+				A7FE55471BEFFE2700ABC506 /* hearthstonefinderTests */,
+				A7FE55521BEFFE2700ABC506 /* hearthstonefinderUITests */,
+				A7FE552E1BEFFE2700ABC506 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7FE552E1BEFFE2700ABC506 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE552D1BEFFE2700ABC506 /* hearthstonefinder.app */,
+				A7FE55441BEFFE2700ABC506 /* hearthstonefinderTests.xctest */,
+				A7FE554F1BEFFE2700ABC506 /* hearthstonefinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7FE552F1BEFFE2700ABC506 /* hearthstonefinder */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */,
+				A7FE55321BEFFE2700ABC506 /* ViewController.swift */,
+				A7FE55341BEFFE2700ABC506 /* Main.storyboard */,
+				A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */,
+				A7FE553C1BEFFE2700ABC506 /* LaunchScreen.storyboard */,
+				A7FE553F1BEFFE2700ABC506 /* Info.plist */,
+				A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */,
+			);
+			path = hearthstonefinder;
+			sourceTree = "<group>";
+		};
+		A7FE55471BEFFE2700ABC506 /* hearthstonefinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE55481BEFFE2700ABC506 /* hearthstonefinderTests.swift */,
+				A7FE554A1BEFFE2700ABC506 /* Info.plist */,
+			);
+			path = hearthstonefinderTests;
+			sourceTree = "<group>";
+		};
+		A7FE55521BEFFE2700ABC506 /* hearthstonefinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE55531BEFFE2700ABC506 /* hearthstonefinderUITests.swift */,
+				A7FE55551BEFFE2700ABC506 /* Info.plist */,
+			);
+			path = hearthstonefinderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7FE552C1BEFFE2700ABC506 /* hearthstonefinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7FE55581BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinder" */;
+			buildPhases = (
+				A7FE55291BEFFE2700ABC506 /* Sources */,
+				A7FE552A1BEFFE2700ABC506 /* Frameworks */,
+				A7FE552B1BEFFE2700ABC506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hearthstonefinder;
+			productName = hearthstonefinder;
+			productReference = A7FE552D1BEFFE2700ABC506 /* hearthstonefinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7FE55431BEFFE2700ABC506 /* hearthstonefinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7FE555B1BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinderTests" */;
+			buildPhases = (
+				A7FE55401BEFFE2700ABC506 /* Sources */,
+				A7FE55411BEFFE2700ABC506 /* Frameworks */,
+				A7FE55421BEFFE2700ABC506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7FE55461BEFFE2700ABC506 /* PBXTargetDependency */,
+			);
+			name = hearthstonefinderTests;
+			productName = hearthstonefinderTests;
+			productReference = A7FE55441BEFFE2700ABC506 /* hearthstonefinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7FE554E1BEFFE2700ABC506 /* hearthstonefinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7FE555E1BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinderUITests" */;
+			buildPhases = (
+				A7FE554B1BEFFE2700ABC506 /* Sources */,
+				A7FE554C1BEFFE2700ABC506 /* Frameworks */,
+				A7FE554D1BEFFE2700ABC506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7FE55511BEFFE2700ABC506 /* PBXTargetDependency */,
+			);
+			name = hearthstonefinderUITests;
+			productName = hearthstonefinderUITests;
+			productReference = A7FE554F1BEFFE2700ABC506 /* hearthstonefinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7FE55251BEFFE2700ABC506 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Yosemite;
+				TargetAttributes = {
+					A7FE552C1BEFFE2700ABC506 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					A7FE55431BEFFE2700ABC506 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = A7FE552C1BEFFE2700ABC506;
+					};
+					A7FE554E1BEFFE2700ABC506 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = A7FE552C1BEFFE2700ABC506;
+					};
+				};
+			};
+			buildConfigurationList = A7FE55281BEFFE2700ABC506 /* Build configuration list for PBXProject "hearthstonefinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7FE55241BEFFE2700ABC506;
+			productRefGroup = A7FE552E1BEFFE2700ABC506 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7FE552C1BEFFE2700ABC506 /* hearthstonefinder */,
+				A7FE55431BEFFE2700ABC506 /* hearthstonefinderTests */,
+				A7FE554E1BEFFE2700ABC506 /* hearthstonefinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7FE552B1BEFFE2700ABC506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FE553E1BEFFE2700ABC506 /* LaunchScreen.storyboard in Resources */,
+				A7FE553B1BEFFE2700ABC506 /* Assets.xcassets in Resources */,
+				A7FE55361BEFFE2700ABC506 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FE55421BEFFE2700ABC506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FE554D1BEFFE2700ABC506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7FE55291BEFFE2700ABC506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FE55331BEFFE2700ABC506 /* ViewController.swift in Sources */,
+				A7FE55391BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld in Sources */,
+				A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FE55401BEFFE2700ABC506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FE55491BEFFE2700ABC506 /* hearthstonefinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FE554B1BEFFE2700ABC506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FE55541BEFFE2700ABC506 /* hearthstonefinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7FE55461BEFFE2700ABC506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7FE552C1BEFFE2700ABC506 /* hearthstonefinder */;
+			targetProxy = A7FE55451BEFFE2700ABC506 /* PBXContainerItemProxy */;
+		};
+		A7FE55511BEFFE2700ABC506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7FE552C1BEFFE2700ABC506 /* hearthstonefinder */;
+			targetProxy = A7FE55501BEFFE2700ABC506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A7FE55341BEFFE2700ABC506 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7FE55351BEFFE2700ABC506 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A7FE553C1BEFFE2700ABC506 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7FE553D1BEFFE2700ABC506 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7FE55561BEFFE2700ABC506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7FE55571BEFFE2700ABC506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7FE55591BEFFE2700ABC506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = hearthstonefinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7FE555A1BEFFE2700ABC506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = hearthstonefinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A7FE555C1BEFFE2700ABC506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = hearthstonefinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hearthstonefinder.app/hearthstonefinder";
+			};
+			name = Debug;
+		};
+		A7FE555D1BEFFE2700ABC506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = hearthstonefinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hearthstonefinder.app/hearthstonefinder";
+			};
+			name = Release;
+		};
+		A7FE555F1BEFFE2700ABC506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = hearthstonefinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = hearthstonefinder;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A7FE55601BEFFE2700ABC506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = hearthstonefinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = hearthstonefinder;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7FE55281BEFFE2700ABC506 /* Build configuration list for PBXProject "hearthstonefinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FE55561BEFFE2700ABC506 /* Debug */,
+				A7FE55571BEFFE2700ABC506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7FE55581BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FE55591BEFFE2700ABC506 /* Debug */,
+				A7FE555A1BEFFE2700ABC506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7FE555B1BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FE555C1BEFFE2700ABC506 /* Debug */,
+				A7FE555D1BEFFE2700ABC506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7FE555E1BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FE555F1BEFFE2700ABC506 /* Debug */,
+				A7FE55601BEFFE2700ABC506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A7FE55381BEFFE2700ABC506 /* hearthstonefinder.xcdatamodel */,
+			);
+			currentVersion = A7FE55381BEFFE2700ABC506 /* hearthstonefinder.xcdatamodel */;
+			path = hearthstonefinder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A7FE55251BEFFE2700ABC506 /* Project object */;
+}
