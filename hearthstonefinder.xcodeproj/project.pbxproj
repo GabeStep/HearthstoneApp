@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		A74491441BF1566B00768CE2 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913C1BF1566B00768CE2 /* Class.swift */; settings = {ASSET_TAGS = (); }; };
+		A74491451BF1566B00768CE2 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		A74491461BF1566B00768CE2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913E1BF1566B00768CE2 /* Card.swift */; settings = {ASSET_TAGS = (); }; };
+		A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		A74491481BF1566B00768CE2 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491401BF1566B00768CE2 /* Set.swift */; settings = {ASSET_TAGS = (); }; };
+		A74491491BF1566B00768CE2 /* AllCards+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		A744914A1BF1566B00768CE2 /* AllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491421BF1566B00768CE2 /* AllCards.swift */; settings = {ASSET_TAGS = (); }; };
 		A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */; };
 		A7FE55331BEFFE2700ABC506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55321BEFFE2700ABC506 /* ViewController.swift */; };
 		A7FE55361BEFFE2700ABC506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE55341BEFFE2700ABC506 /* Main.storyboard */; };
@@ -35,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A744913C1BF1566B00768CE2 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A744913E1BF1566B00768CE2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A74491401BF1566B00768CE2 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AllCards+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A74491421BF1566B00768CE2 /* AllCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCards.swift; sourceTree = "<group>"; };
 		A7FE552D1BEFFE2700ABC506 /* hearthstonefinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hearthstonefinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7FE55321BEFFE2700ABC506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A744914C1BF156C900768CE2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */,
+				A744913C1BF1566B00768CE2 /* Class.swift */,
+				A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */,
+				A744913E1BF1566B00768CE2 /* Card.swift */,
+				A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */,
+				A74491401BF1566B00768CE2 /* Set.swift */,
+				A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */,
+				A74491421BF1566B00768CE2 /* AllCards.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		A7FE55241BEFFE2700ABC506 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +114,7 @@
 				A7FE55471BEFFE2700ABC506 /* hearthstonefinderTests */,
 				A7FE55521BEFFE2700ABC506 /* hearthstonefinderUITests */,
 				A7FE552E1BEFFE2700ABC506 /* Products */,
+				A744914C1BF156C900768CE2 /* CoreData */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,9 +290,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74491491BF1566B00768CE2 /* AllCards+CoreDataProperties.swift in Sources */,
+				A74491481BF1566B00768CE2 /* Set.swift in Sources */,
+				A74491441BF1566B00768CE2 /* Class.swift in Sources */,
+				A744914A1BF1566B00768CE2 /* AllCards.swift in Sources */,
+				A74491451BF1566B00768CE2 /* Card+CoreDataProperties.swift in Sources */,
+				A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */,
 				A7FE55331BEFFE2700ABC506 /* ViewController.swift in Sources */,
 				A7FE55391BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld in Sources */,
 				A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */,
+				A74491461BF1566B00768CE2 /* Card.swift in Sources */,
+				A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +527,7 @@
 				A7FE555A1BEFFE2700ABC506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7FE555B1BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinderTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +536,7 @@
 				A7FE555D1BEFFE2700ABC506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7FE555E1BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +545,7 @@
 				A7FE55601BEFFE2700ABC506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
