@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     
     //Array for classes
     var classes = Dictionary<String,Class>()
