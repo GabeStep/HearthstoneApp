@@ -30,5 +30,6 @@ extension Card {
     @NSManaged var text: String?
     @NSManaged var hero: Class?
     @NSManaged var set: NSManagedObject?
+    @NSManaged var count: NSNumber?
 
 }

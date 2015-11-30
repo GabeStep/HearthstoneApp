@@ -15,6 +15,7 @@ class Card: NSManagedObject {
     class func createInManagedObjectContext(moc: NSManagedObjectContext, cardID: String) -> Card {
         let newCard = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: moc) as! Card
         newCard.cardId = cardID;
+        newCard.count = 0;
         newCard
         return newCard;
     }

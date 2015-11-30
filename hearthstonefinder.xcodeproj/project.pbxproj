@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		A74491441BF1566B00768CE2 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913C1BF1566B00768CE2 /* Class.swift */; settings = {ASSET_TAGS = (); }; };
-		A74491451BF1566B00768CE2 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		A74491461BF1566B00768CE2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913E1BF1566B00768CE2 /* Card.swift */; settings = {ASSET_TAGS = (); }; };
-		A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		A74491481BF1566B00768CE2 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491401BF1566B00768CE2 /* Set.swift */; settings = {ASSET_TAGS = (); }; };
-		A74491491BF1566B00768CE2 /* AllCards+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		A744914A1BF1566B00768CE2 /* AllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491421BF1566B00768CE2 /* AllCards.swift */; settings = {ASSET_TAGS = (); }; };
+		1AE1FC4A1C0636CC0023CACC /* MyCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1FC491C0636CC0023CACC /* MyCardsController.swift */; };
+		1AE1FC4C1C0CC7660023CACC /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1FC4B1C0CC7660023CACC /* CardCell.swift */; };
+		A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */; };
+		A74491441BF1566B00768CE2 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913C1BF1566B00768CE2 /* Class.swift */; };
+		A74491451BF1566B00768CE2 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */; };
+		A74491461BF1566B00768CE2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913E1BF1566B00768CE2 /* Card.swift */; };
+		A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */; };
+		A74491481BF1566B00768CE2 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491401BF1566B00768CE2 /* Set.swift */; };
+		A74491491BF1566B00768CE2 /* AllCards+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */; };
+		A744914A1BF1566B00768CE2 /* AllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491421BF1566B00768CE2 /* AllCards.swift */; };
 		A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */; };
-		A7FE55331BEFFE2700ABC506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55321BEFFE2700ABC506 /* ViewController.swift */; };
+		A7FE55331BEFFE2700ABC506 /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55321BEFFE2700ABC506 /* DownloadController.swift */; };
 		A7FE55361BEFFE2700ABC506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE55341BEFFE2700ABC506 /* Main.storyboard */; };
 		A7FE55391BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */; };
 		A7FE553B1BEFFE2700ABC506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */; };
-		A7FE553E1BEFFE2700ABC506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE553C1BEFFE2700ABC506 /* LaunchScreen.storyboard */; };
 		A7FE55491BEFFE2700ABC506 /* hearthstonefinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55481BEFFE2700ABC506 /* hearthstonefinderTests.swift */; };
 		A7FE55541BEFFE2700ABC506 /* hearthstonefinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55531BEFFE2700ABC506 /* hearthstonefinderUITests.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AE1FC491C0636CC0023CACC /* MyCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCardsController.swift; sourceTree = "<group>"; };
+		1AE1FC4B1C0CC7660023CACC /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A744913C1BF1566B00768CE2 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -53,11 +56,10 @@
 		A74491421BF1566B00768CE2 /* AllCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCards.swift; sourceTree = "<group>"; };
 		A7FE552D1BEFFE2700ABC506 /* hearthstonefinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hearthstonefinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7FE55321BEFFE2700ABC506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7FE55321BEFFE2700ABC506 /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
 		A7FE55351BEFFE2700ABC506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7FE55381BEFFE2700ABC506 /* hearthstonefinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hearthstonefinder.xcdatamodel; sourceTree = "<group>"; };
 		A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7FE553D1BEFFE2700ABC506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7FE553F1BEFFE2700ABC506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7FE55441BEFFE2700ABC506 /* hearthstonefinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hearthstonefinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FE55481BEFFE2700ABC506 /* hearthstonefinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hearthstonefinderTests.swift; sourceTree = "<group>"; };
@@ -132,10 +134,11 @@
 			isa = PBXGroup;
 			children = (
 				A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */,
-				A7FE55321BEFFE2700ABC506 /* ViewController.swift */,
 				A7FE55341BEFFE2700ABC506 /* Main.storyboard */,
+				1AE1FC4B1C0CC7660023CACC /* CardCell.swift */,
+				A7FE55321BEFFE2700ABC506 /* DownloadController.swift */,
+				1AE1FC491C0636CC0023CACC /* MyCardsController.swift */,
 				A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */,
-				A7FE553C1BEFFE2700ABC506 /* LaunchScreen.storyboard */,
 				A7FE553F1BEFFE2700ABC506 /* Info.plist */,
 				A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */,
 			);
@@ -263,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7FE553E1BEFFE2700ABC506 /* LaunchScreen.storyboard in Resources */,
 				A7FE553B1BEFFE2700ABC506 /* Assets.xcassets in Resources */,
 				A7FE55361BEFFE2700ABC506 /* Main.storyboard in Resources */,
 			);
@@ -291,15 +293,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74491491BF1566B00768CE2 /* AllCards+CoreDataProperties.swift in Sources */,
+				1AE1FC4A1C0636CC0023CACC /* MyCardsController.swift in Sources */,
 				A74491481BF1566B00768CE2 /* Set.swift in Sources */,
 				A74491441BF1566B00768CE2 /* Class.swift in Sources */,
 				A744914A1BF1566B00768CE2 /* AllCards.swift in Sources */,
 				A74491451BF1566B00768CE2 /* Card+CoreDataProperties.swift in Sources */,
 				A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */,
-				A7FE55331BEFFE2700ABC506 /* ViewController.swift in Sources */,
+				A7FE55331BEFFE2700ABC506 /* DownloadController.swift in Sources */,
 				A7FE55391BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld in Sources */,
 				A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */,
 				A74491461BF1566B00768CE2 /* Card.swift in Sources */,
+				1AE1FC4C1C0CC7660023CACC /* CardCell.swift in Sources */,
 				A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,14 +346,6 @@
 				A7FE55351BEFFE2700ABC506 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A7FE553C1BEFFE2700ABC506 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7FE553D1BEFFE2700ABC506 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
