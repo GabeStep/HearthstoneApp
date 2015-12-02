@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
-    <entity name="AllCards" representedClassName=".AllCards" syncable="YES">
-        <relationship name="heros" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" inverseName="all" inverseEntity="Class" syncable="YES"/>
-        <relationship name="sets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Set" inverseName="all" inverseEntity="Set" syncable="YES"/>
-    </entity>
     <entity name="Card" representedClassName=".Card" syncable="YES">
         <attribute name="attack" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,18 +21,16 @@
     </entity>
     <entity name="Class" representedClassName=".Class" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="all" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AllCards" inverseName="heros" inverseEntity="AllCards" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="hero" inverseEntity="Card" syncable="YES"/>
     </entity>
     <entity name="Set" representedClassName=".Set" syncable="YES">
+        <attribute name="all" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="all" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AllCards" inverseName="sets" inverseEntity="AllCards" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="set" inverseEntity="Card" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AllCards" positionX="-362" positionY="-117" width="128" height="73"/>
         <element name="Card" positionX="52" positionY="-127" width="128" height="300"/>
-        <element name="Class" positionX="-126" positionY="-90" width="128" height="88"/>
-        <element name="Set" positionX="-371" positionY="111" width="128" height="88"/>
+        <element name="Class" positionX="-126" positionY="-90" width="128" height="75"/>
+        <element name="Set" positionX="-371" positionY="111" width="128" height="90"/>
     </elements>
 </model>

@@ -15,6 +15,7 @@ class Set: NSManagedObject {
     class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String) -> Set {
         let newSet = NSEntityDescription.insertNewObjectForEntityForName("Set", inManagedObjectContext: moc) as! Set
         newSet.name = name
+        newSet.all = NSNumber(bool: false)
         return newSet;
     }
 }

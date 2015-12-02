@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AE1FC4A1C0636CC0023CACC /* MyCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1FC491C0636CC0023CACC /* MyCardsController.swift */; };
+		1A95BA591C0F32980093D755 /* MyCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA581C0F32980093D755 /* MyCardsController.swift */; };
+		1A95BA5B1C0F32A40093D755 /* SetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA5A1C0F32A40093D755 /* SetCell.swift */; };
+		1A95BA5D1C0F32AA0093D755 /* SetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA5C1C0F32AA0093D755 /* SetController.swift */; };
+		1A95BA5F1C0F32B00093D755 /* ClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA5E1C0F32B00093D755 /* ClassController.swift */; };
+		1A95BA611C0F32D70093D755 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA601C0F32D70093D755 /* ClassCell.swift */; };
 		1AE1FC4C1C0CC7660023CACC /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1FC4B1C0CC7660023CACC /* CardCell.swift */; };
 		A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */; };
 		A74491441BF1566B00768CE2 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913C1BF1566B00768CE2 /* Class.swift */; };
@@ -15,8 +19,6 @@
 		A74491461BF1566B00768CE2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913E1BF1566B00768CE2 /* Card.swift */; };
 		A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */; };
 		A74491481BF1566B00768CE2 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491401BF1566B00768CE2 /* Set.swift */; };
-		A74491491BF1566B00768CE2 /* AllCards+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */; };
-		A744914A1BF1566B00768CE2 /* AllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74491421BF1566B00768CE2 /* AllCards.swift */; };
 		A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */; };
 		A7FE55331BEFFE2700ABC506 /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE55321BEFFE2700ABC506 /* DownloadController.swift */; };
 		A7FE55361BEFFE2700ABC506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE55341BEFFE2700ABC506 /* Main.storyboard */; };
@@ -44,7 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AE1FC491C0636CC0023CACC /* MyCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCardsController.swift; sourceTree = "<group>"; };
+		1A95BA581C0F32980093D755 /* MyCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCardsController.swift; path = ../../../Desktop/temp/MyCardsController.swift; sourceTree = "<group>"; };
+		1A95BA5A1C0F32A40093D755 /* SetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetCell.swift; path = ../../../Desktop/temp/SetCell.swift; sourceTree = "<group>"; };
+		1A95BA5C1C0F32AA0093D755 /* SetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetController.swift; path = ../../../Desktop/temp/SetController.swift; sourceTree = "<group>"; };
+		1A95BA5E1C0F32B00093D755 /* ClassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassController.swift; path = ../../../Desktop/temp/ClassController.swift; sourceTree = "<group>"; };
+		1A95BA601C0F32D70093D755 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassCell.swift; path = ../ClassCell.swift; sourceTree = "<group>"; };
 		1AE1FC4B1C0CC7660023CACC /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A744913C1BF1566B00768CE2 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
@@ -52,8 +58,6 @@
 		A744913E1BF1566B00768CE2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A74491401BF1566B00768CE2 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
-		A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AllCards+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A74491421BF1566B00768CE2 /* AllCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCards.swift; sourceTree = "<group>"; };
 		A7FE552D1BEFFE2700ABC506 /* hearthstonefinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hearthstonefinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7FE55321BEFFE2700ABC506 /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
@@ -103,8 +107,6 @@
 				A744913E1BF1566B00768CE2 /* Card.swift */,
 				A744913F1BF1566B00768CE2 /* Set+CoreDataProperties.swift */,
 				A74491401BF1566B00768CE2 /* Set.swift */,
-				A74491411BF1566B00768CE2 /* AllCards+CoreDataProperties.swift */,
-				A74491421BF1566B00768CE2 /* AllCards.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -133,12 +135,16 @@
 		A7FE552F1BEFFE2700ABC506 /* hearthstonefinder */ = {
 			isa = PBXGroup;
 			children = (
+				1A95BA601C0F32D70093D755 /* ClassCell.swift */,
 				A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */,
 				A7FE55341BEFFE2700ABC506 /* Main.storyboard */,
 				1AE1FC4B1C0CC7660023CACC /* CardCell.swift */,
+				1A95BA5A1C0F32A40093D755 /* SetCell.swift */,
 				A7FE55321BEFFE2700ABC506 /* DownloadController.swift */,
-				1AE1FC491C0636CC0023CACC /* MyCardsController.swift */,
 				A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */,
+				1A95BA5C1C0F32AA0093D755 /* SetController.swift */,
+				1A95BA5E1C0F32B00093D755 /* ClassController.swift */,
+				1A95BA581C0F32980093D755 /* MyCardsController.swift */,
 				A7FE553F1BEFFE2700ABC506 /* Info.plist */,
 				A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */,
 			);
@@ -292,14 +298,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A74491491BF1566B00768CE2 /* AllCards+CoreDataProperties.swift in Sources */,
-				1AE1FC4A1C0636CC0023CACC /* MyCardsController.swift in Sources */,
+				1A95BA5B1C0F32A40093D755 /* SetCell.swift in Sources */,
+				1A95BA591C0F32980093D755 /* MyCardsController.swift in Sources */,
 				A74491481BF1566B00768CE2 /* Set.swift in Sources */,
 				A74491441BF1566B00768CE2 /* Class.swift in Sources */,
-				A744914A1BF1566B00768CE2 /* AllCards.swift in Sources */,
 				A74491451BF1566B00768CE2 /* Card+CoreDataProperties.swift in Sources */,
 				A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */,
 				A7FE55331BEFFE2700ABC506 /* DownloadController.swift in Sources */,
+				1A95BA611C0F32D70093D755 /* ClassCell.swift in Sources */,
+				1A95BA5D1C0F32AA0093D755 /* SetController.swift in Sources */,
+				1A95BA5F1C0F32B00093D755 /* ClassController.swift in Sources */,
 				A7FE55391BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld in Sources */,
 				A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */,
 				A74491461BF1566B00768CE2 /* Card.swift in Sources */,

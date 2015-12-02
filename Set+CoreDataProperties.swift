@@ -15,7 +15,7 @@ import CoreData
 extension Set {
 
     @NSManaged var name: String?
-    @NSManaged var all: NSManagedObject?
+    @NSManaged var all: NSNumber?
     @NSManaged var cards: NSSet?
 
 }
