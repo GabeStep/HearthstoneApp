@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Deck+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Deck.swift">
+   </FileRef>
+   <FileRef
+      location = "group:hearthstonefinder.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

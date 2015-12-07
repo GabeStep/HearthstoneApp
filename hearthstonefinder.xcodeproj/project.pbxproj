@@ -12,7 +12,12 @@
 		1A95BA5D1C0F32AA0093D755 /* SetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA5C1C0F32AA0093D755 /* SetController.swift */; };
 		1A95BA5F1C0F32B00093D755 /* ClassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA5E1C0F32B00093D755 /* ClassController.swift */; };
 		1A95BA611C0F32D70093D755 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A95BA601C0F32D70093D755 /* ClassCell.swift */; };
+		1AD464D91C14A679006F4DAE /* DeckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD464D81C14A679006F4DAE /* DeckCell.swift */; };
+		1AD464DF1C14B117006F4DAE /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD464DE1C14B117006F4DAE /* Deck+CoreDataProperties.swift */; };
+		1AD464E11C14B130006F4DAE /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD464E01C14B130006F4DAE /* Deck.swift */; };
+		1ADDB66E1C15FB2100D05F75 /* DecksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDB66D1C15FB2100D05F75 /* DecksController.swift */; };
 		1AE1FC4C1C0CC7660023CACC /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1FC4B1C0CC7660023CACC /* CardCell.swift */; };
+		71F69FCAA9550642268DB1D8 /* Pods_hearthstonefinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8807B8D01866689FFCD351D1 /* Pods_hearthstonefinder.framework */; };
 		A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */; };
 		A74491441BF1566B00768CE2 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913C1BF1566B00768CE2 /* Class.swift */; };
 		A74491451BF1566B00768CE2 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */; };
@@ -51,7 +56,15 @@
 		1A95BA5C1C0F32AA0093D755 /* SetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetController.swift; path = ../../../Desktop/temp/SetController.swift; sourceTree = "<group>"; };
 		1A95BA5E1C0F32B00093D755 /* ClassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassController.swift; path = ../../../Desktop/temp/ClassController.swift; sourceTree = "<group>"; };
 		1A95BA601C0F32D70093D755 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassCell.swift; path = ../ClassCell.swift; sourceTree = "<group>"; };
+		1A95BA621C0F93A80093D755 /* hearthstonefinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hearthstonefinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AD464D81C14A679006F4DAE /* DeckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckCell.swift; sourceTree = "<group>"; };
+		1AD464DE1C14B117006F4DAE /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1AD464E01C14B130006F4DAE /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		1ADDB66D1C15FB2100D05F75 /* DecksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecksController.swift; path = ../DecksController.swift; sourceTree = "<group>"; };
 		1AE1FC4B1C0CC7660023CACC /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		66C39A4E02BCF78F9EB321E3 /* Pods-hearthstonefinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hearthstonefinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hearthstonefinder/Pods-hearthstonefinder.debug.xcconfig"; sourceTree = "<group>"; };
+		821A8B7214580A5C0672E170 /* Pods-hearthstonefinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hearthstonefinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-hearthstonefinder/Pods-hearthstonefinder.release.xcconfig"; sourceTree = "<group>"; };
+		8807B8D01866689FFCD351D1 /* Pods_hearthstonefinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hearthstonefinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A744913C1BF1566B00768CE2 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F69FCAA9550642268DB1D8 /* Pods_hearthstonefinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +112,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99B6D90C2112CFF073677E1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66C39A4E02BCF78F9EB321E3 /* Pods-hearthstonefinder.debug.xcconfig */,
+				821A8B7214580A5C0672E170 /* Pods-hearthstonefinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A744914C1BF156C900768CE2 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				1AD464E01C14B130006F4DAE /* Deck.swift */,
+				1AD464DE1C14B117006F4DAE /* Deck+CoreDataProperties.swift */,
 				A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */,
 				A744913C1BF1566B00768CE2 /* Class.swift */,
 				A744913D1BF1566B00768CE2 /* Card+CoreDataProperties.swift */,
@@ -119,6 +144,8 @@
 				A7FE55521BEFFE2700ABC506 /* hearthstonefinderUITests */,
 				A7FE552E1BEFFE2700ABC506 /* Products */,
 				A744914C1BF156C900768CE2 /* CoreData */,
+				99B6D90C2112CFF073677E1B /* Pods */,
+				CF14C891022885C92CB2109F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,8 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				1A95BA601C0F32D70093D755 /* ClassCell.swift */,
+				1ADDB66D1C15FB2100D05F75 /* DecksController.swift */,
 				A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */,
 				A7FE55341BEFFE2700ABC506 /* Main.storyboard */,
+				1AD464D81C14A679006F4DAE /* DeckCell.swift */,
 				1AE1FC4B1C0CC7660023CACC /* CardCell.swift */,
 				1A95BA5A1C0F32A40093D755 /* SetCell.swift */,
 				A7FE55321BEFFE2700ABC506 /* DownloadController.swift */,
@@ -147,6 +176,7 @@
 				1A95BA581C0F32980093D755 /* MyCardsController.swift */,
 				A7FE553F1BEFFE2700ABC506 /* Info.plist */,
 				A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */,
+				1A95BA621C0F93A80093D755 /* hearthstonefinder-Bridging-Header.h */,
 			);
 			path = hearthstonefinder;
 			sourceTree = "<group>";
@@ -169,6 +199,14 @@
 			path = hearthstonefinderUITests;
 			sourceTree = "<group>";
 		};
+		CF14C891022885C92CB2109F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8807B8D01866689FFCD351D1 /* Pods_hearthstonefinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7FE55581BEFFE2700ABC506 /* Build configuration list for PBXNativeTarget "hearthstonefinder" */;
 			buildPhases = (
+				390E678BDD8496A0D7AA5FDA /* Check Pods Manifest.lock */,
 				A7FE55291BEFFE2700ABC506 /* Sources */,
 				A7FE552A1BEFFE2700ABC506 /* Frameworks */,
 				A7FE552B1BEFFE2700ABC506 /* Resources */,
+				5FFD6CA895E6F9982D2BB6D6 /* Embed Pods Frameworks */,
+				2CCAA2482D873F52A734121E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +272,7 @@
 		A7FE55251BEFFE2700ABC506 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Yosemite;
 				TargetAttributes = {
@@ -293,11 +335,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CCAA2482D873F52A734121E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hearthstonefinder/Pods-hearthstonefinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		390E678BDD8496A0D7AA5FDA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5FFD6CA895E6F9982D2BB6D6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hearthstonefinder/Pods-hearthstonefinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A7FE55291BEFFE2700ABC506 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD464E11C14B130006F4DAE /* Deck.swift in Sources */,
+				1AD464D91C14A679006F4DAE /* DeckCell.swift in Sources */,
 				1A95BA5B1C0F32A40093D755 /* SetCell.swift in Sources */,
 				1A95BA591C0F32980093D755 /* MyCardsController.swift in Sources */,
 				A74491481BF1566B00768CE2 /* Set.swift in Sources */,
@@ -308,11 +400,13 @@
 				1A95BA611C0F32D70093D755 /* ClassCell.swift in Sources */,
 				1A95BA5D1C0F32AA0093D755 /* SetController.swift in Sources */,
 				1A95BA5F1C0F32B00093D755 /* ClassController.swift in Sources */,
+				1AD464DF1C14B117006F4DAE /* Deck+CoreDataProperties.swift in Sources */,
 				A7FE55391BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld in Sources */,
 				A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */,
 				A74491461BF1566B00768CE2 /* Card.swift in Sources */,
 				1AE1FC4C1C0CC7660023CACC /* CardCell.swift in Sources */,
 				A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */,
+				1ADDB66E1C15FB2100D05F75 /* DecksController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,23 +538,30 @@
 		};
 		A7FE55591BEFFE2700ABC506 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C39A4E02BCF78F9EB321E3 /* Pods-hearthstonefinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = hearthstonefinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hearthstonefinder/hearthstonefinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A7FE555A1BEFFE2700ABC506 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 821A8B7214580A5C0672E170 /* Pods-hearthstonefinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = hearthstonefinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stepanovich.gabriel.hearthstonefinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hearthstonefinder/hearthstonefinder-Bridging-Header.h";
 			};
 			name = Release;
 		};

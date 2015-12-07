@@ -23,14 +23,24 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="hero" inverseEntity="Card" syncable="YES"/>
     </entity>
+    <entity name="Deck" representedClassName="Deck" syncable="YES">
+        <attribute name="idList" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="card1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+        <relationship name="card2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" syncable="YES"/>
+        <relationship name="classRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" syncable="YES"/>
+    </entity>
     <entity name="Set" representedClassName=".Set" syncable="YES">
         <attribute name="all" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="set" inverseEntity="Card" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Card" positionX="52" positionY="-127" width="128" height="300"/>
+        <element name="Card" positionX="52" positionY="-93" width="128" height="300"/>
         <element name="Class" positionX="-126" positionY="-90" width="128" height="75"/>
-        <element name="Set" positionX="-371" positionY="111" width="128" height="90"/>
+        <element name="Deck" positionX="-315" positionY="-22" width="128" height="150"/>
+        <element name="Set" positionX="-180" positionY="117" width="128" height="90"/>
     </elements>
 </model>

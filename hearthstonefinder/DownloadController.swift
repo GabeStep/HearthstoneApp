@@ -8,15 +8,43 @@
 
 import UIKit
 import CoreData
+import Parse
+import SwiftHTTP
+import SwiftyJSON
 
 class DownloadController: UIViewController {
     
     //Array for classes
     var classes = Dictionary<String,Class>()
     
+    //Cards
+    var allCards = Dictionary<String,Card>()
+    
     // error list
     enum errors : ErrorType {
         case fetchError
+    }
+    
+    func downloadDecks(){
+        let query = PFQuery(className:"decks")
+        query.findObjectsInBackgroundWithBlock {
+            (decks: [PFObject]?, error: NSError?) -> Void in
+            if error == nil && decks != nil {
+                for deck in decks!{
+                    self.saveDeck(deck)
+                }
+                
+                // save moc
+                do{
+                    try self.moc.save()
+                } catch _ as NSError {
+                    print("error with core data card save")
+                }
+                
+            } else {
+                print(error)
+            }
+        }
     }
     
     // object to keep the same managed object context
@@ -24,9 +52,10 @@ class DownloadController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cardRequest = NSFetchRequest(entityName: "Class")
+        let cardRequest = NSFetchRequest(entityName: "Card")
+        let deckRequest = NSFetchRequest(entityName: "Deck")
         do{
-            guard let cardResult = try self.moc.executeFetchRequest(cardRequest) as? [Class] else {
+            guard let cardResult = try self.moc.executeFetchRequest(cardRequest) as? [Card] else {
                 throw errors.fetchError
             }
             if cardResult.count == 0{
@@ -37,10 +66,21 @@ class DownloadController: UIViewController {
         } catch {
             print("fetch error:")
         }
-        
-        
+        do{
+            guard let deckResult = try self.moc.executeFetchRequest(deckRequest) as? [Deck] else {
+                throw errors.fetchError
+            }
+            if deckResult.count == 0{
+                self.downloadDecks()
+            } else {
+                print("Decks found: \(deckResult.count)")
+            }
+        } catch {
+            print("fetch error:")
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
+        // unlock buttons
     }
     
     //function to grab cards json from mashape api
@@ -48,72 +88,57 @@ class DownloadController: UIViewController {
     // right now I just added thingy to info.plist to allow
     func getCards(){
         
-        // mashape url
-        let url = NSURL(string: "https://omgvamp-hearthstone-v1.p.mashape.com/cards?collectible=1")
-        
-        //setting up the request
-        let request = NSMutableURLRequest(URL: url!)
-        request.addValue("EoiFVOryjymshhQcApwmhvoGBGRIp1Br4khjsnlCIqJTVvsSph", forHTTPHeaderField: "X-Mashape-Key")
-        
-        
-            // creating a task for getting the data with code block
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
-                data, response, error in
-                
-                if error != nil{
-                    print("error")
-                }else{
-                    print("AsSychronous")
-                }
-                
-                // recieved data
-                let d = NSData(data: data!)
+        do {
+            let opt = try HTTP.GET("https://omgvamp-hearthstone-v1.p.mashape.com/cards?collectible=1", headers: ["X-Mashape-Key": "EoiFVOryjymshhQcApwmhvoGBGRIp1Br4khjsnlCIqJTVvsSph"])
+            opt.start { response in
+                print(response)
+                let d = NSData(data: response.data)
                 self.parseCards(d)
-                
             }
-            task.resume()
-        
-        //NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: response)
+        } catch let error {
+            print("couldn't serialize the paraemeters: \(error)")
+        }
     }
     
     // core data saving
-    func saveCards(){
-        
-    }
     
-    
-    // function to parse out the card call.
-    func parseCards(data: NSData){
-        
-        let parsedObject: AnyObject?
-        do {
-            parsedObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
-            
-        } catch let error as NSError{
-            print(error)
-            return
-        }catch {
-            fatalError()
-        }
-        var allCards = [String: [Card]]()
-        
-        if let topLeveObj = parsedObject as? Dictionary<String,AnyObject>{
-            for(key,value) in topLeveObj {
-                if let items = value as?  Array<Dictionary<String,AnyObject>> {
-                    var set = [Card]()
-                    let cs = Set.createInManagedObjectContext(moc, name: key)
-                    for i in items {
-                        set.append(self.toCard(i, currentSet: cs))
-                    }
-                    print(key)
-                    for c in set{
-                        print("\t" + c.name!)
-                        
-                    }
-                    allCards[key] = set
+    func saveDeck(deck: PFObject){
+        if let name = deck["name"] {
+            let newDeck = Deck.createInManagedObjectContext(moc, name: name as! String)
+            if let ids = deck["idList"] as! String?{
+                newDeck.idList = ids
+            }
+            if let link = deck["link"] as! String?{
+                newDeck.link = link
+            }
+            if let tier = deck["tier"] as! String?{
+                if let num = Int(tier){
+                    newDeck.tier = NSNumber(integer:num)
                 }
             }
         }
+    }
+    
+    // function to parse out the card call.
+    func parseCards(data: NSData){
+
+        let json = JSON(data: data)
+
+        //If json is .Dictionary
+        for (setName,subJson):(String, JSON) in json {
+
+            let cs = Set.createInManagedObjectContext(moc, name: setName)
+
+            for (_,inner):(String, JSON) in subJson {
+                let c = self.toCard(inner, currentSet: cs)
+                if(c.cardId != "ERROR"){
+                    allCards[c.cardId!] = c;
+                }else{
+                    moc.deleteObject(c)
+                }
+            }
+        }
+        
         do{
             try moc.save()
         } catch _ as NSError {
@@ -127,36 +152,35 @@ class DownloadController: UIViewController {
     }
     // Convert Dictionary to Card Class instance
     // not sure if necesary just doing it for now
-    func toCard(c: Dictionary<String,AnyObject>, currentSet: Set) -> Card{
-        
-        if let y = c["cardId"] as? String{
+    func toCard(c: JSON, currentSet: Set) -> Card{
+        if let y = c["cardId"].string{
             let newCard = Card.createInManagedObjectContext(moc, cardID: y)
             newCard.set = currentSet
-            if let x = c["cost"] as? NSNumber{
+            if let x = c["cost"].number{
                 newCard.cost = x
             }
             
-            if let x = c["faction"] as? String{
+            if let x = c["faction"].string{
                 newCard.faction = x
             }
             
-            if let x = c["flavor"] as? String{
+            if let x = c["flavor"].string{
                 newCard.flavor = x
             }
             
-            if let x = c["health"] as? NSNumber{
+            if let x = c["health"].number{
                 newCard.health = x
             }
             
-            if let x = c["howToGet"] as? String{
+            if let x = c["howToGet"].string{
                 newCard.howToGet = x
             }
             
-            if let x = c["name"] as? String{
+            if let x = c["name"].string{
                 newCard.name = x
             }
             
-            if let x = c["playerClass"] as? String{
+            if let x = c["playerClass"].string{
                 if let z = classes[x]{
                     newCard.hero = z
                 }else{
@@ -165,26 +189,28 @@ class DownloadController: UIViewController {
                 }
             }
             
-            if let x = c["img"] as? String{
+            if let x = c["img"].string{
                 newCard.img = x
             }
             
-            if let x = c["race"] as? String{
+            if let x = c["race"].string {
                 newCard.race = x
             }
         
-            if let x = c["rarity"] as? String{
+            if let x = c["rarity"].string{
                 newCard.rarity = x
             }
         
-            if let x = c["type"] as? String{
+            if let x = c["type"].string{
                 newCard.type = x
             }
             
             return newCard
         }
-        return nil as Card!
+        
+        return Card.createInManagedObjectContext(moc, cardID: "ERROR")
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
