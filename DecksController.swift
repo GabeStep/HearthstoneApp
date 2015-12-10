@@ -62,6 +62,7 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
                         if(count.containsString("1")){
                             if let found = (allCards.filter(){ $0.cardId! == card })[0] as Card?{
                                 deck.addCard1(found)
+                                print(found.name)
                                 if(classCheck){
                                     if let hero = found.hero{
                                         deck.classRelation = hero;
@@ -72,6 +73,7 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
                         }else if(count.containsString("2")){
                             if let found = (allCards.filter(){ $0.cardId! == card })[0] as Card?{
                                 deck.addCard1(found)
+                                print(found.name)
                                 if(classCheck){
                                     if let hero = found.hero{
                                         deck.classRelation = hero;
@@ -82,6 +84,11 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
                         }
                     }
                 }
+        }
+        do{
+            try self.managedObjectContext.save()
+        } catch _ as NSError {
+            print("error with core data card save")
         }
     }
 
@@ -129,7 +136,8 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
         
         
         cell.name.text = d.name
-        getCardsData(d)
+        //getCardsData(d)
+        d.dustCost()
         //cell.dust.text = d.dust
         return cell
     }
@@ -169,14 +177,16 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "passDeck"{
+            let secondViewController : DeckViewController = segue.destinationViewController as! DeckViewController
+            
+            let indexPath = self.tableView.indexPathForSelectedRow //get index of data for selected row
+            
+            let d = fetchedResultsController.objectAtIndexPath(indexPath!) as! Deck
+            secondViewController.passData = d // get data by index and pass it to second view controller
+            
+        }
     }
-    */
 
 }

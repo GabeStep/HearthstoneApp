@@ -30,6 +30,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="name" destination="AIp-aQ-NUg" id="OBa-vb-QD2"/>
+                                    <segue destination="NJH-aB-PLc" kind="show" identifier="passDeck" id="agu-nb-fLk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -38,11 +39,33 @@
                             <outlet property="delegate" destination="Iqr-E0-Bml" id="4pu-Rn-Tfs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Deck Finder" id="0j7-Q8-zl3" userLabel="HeartFinder"/>
+                    <navigationItem key="navigationItem" title="Deck Finder" id="0j7-Q8-zl3" userLabel="HeartFinder">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3w-Go-Fe9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="615" y="1006"/>
+        </scene>
+        <!--Deck View Controller-->
+        <scene sceneID="j7i-kK-cfk">
+            <objects>
+                <viewController id="NJH-aB-PLc" customClass="DeckViewController" customModule="hearthstonefinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oF4-7X-E11"/>
+                        <viewControllerLayoutGuide type="bottom" id="fTJ-Jw-zCH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tYF-24-zuQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGn-Al-g3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="1812"/>
         </scene>
         <!--Download Controller-->
         <scene sceneID="gEC-c9-Nz5">

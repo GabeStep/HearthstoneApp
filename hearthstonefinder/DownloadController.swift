@@ -119,6 +119,8 @@ class DownloadController: UIViewController {
         }
     }
     
+    
+    
     // function to parse out the card call.
     func parseCards(data: NSData){
 
@@ -174,6 +176,7 @@ class DownloadController: UIViewController {
             
             if let x = c["howToGet"].string{
                 newCard.howToGet = x
+                newCard.craft = NSNumber(bool: false)
             }
             
             if let x = c["name"].string{

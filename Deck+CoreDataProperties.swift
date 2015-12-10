@@ -21,5 +21,6 @@ extension Deck {
     @NSManaged var classRelation: Class?
     @NSManaged var card2: NSSet?
     @NSManaged var tier: NSNumber?
+    @NSManaged var dust: NSNumber?
 
 }

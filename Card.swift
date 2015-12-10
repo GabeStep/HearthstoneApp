@@ -16,7 +16,22 @@ class Card: NSManagedObject {
         let newCard = NSEntityDescription.insertNewObjectForEntityForName("Card", inManagedObjectContext: moc) as! Card
         newCard.cardId = cardID;
         newCard.count = 0;
-        newCard
+        newCard.craft = NSNumber(bool: true)
         return newCard;
+    }
+    
+    func dustCost() -> NSNumber? {
+        if(Bool(self.craft!)){
+            if(self.rarity! == "Common"){
+                return 40;
+            } else if(self.rarity! == "Rare"){
+                return 100;
+            } else if(self.rarity! == "Epic"){
+                return 400;
+            } else if(self.rarity! == "Legendary"){
+                return 1600;
+            }
+        }
+        return 0;
     }
 }

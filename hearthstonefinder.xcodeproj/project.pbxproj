@@ -16,6 +16,7 @@
 		1AD464DF1C14B117006F4DAE /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD464DE1C14B117006F4DAE /* Deck+CoreDataProperties.swift */; };
 		1AD464E11C14B130006F4DAE /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD464E01C14B130006F4DAE /* Deck.swift */; };
 		1ADDB66E1C15FB2100D05F75 /* DecksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDB66D1C15FB2100D05F75 /* DecksController.swift */; };
+		1ADDB6701C16110700D05F75 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDB66F1C16110700D05F75 /* DeckViewController.swift */; };
 		1AE1FC4C1C0CC7660023CACC /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1FC4B1C0CC7660023CACC /* CardCell.swift */; };
 		71F69FCAA9550642268DB1D8 /* Pods_hearthstonefinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8807B8D01866689FFCD351D1 /* Pods_hearthstonefinder.framework */; };
 		A74491431BF1566B00768CE2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A744913B1BF1566B00768CE2 /* Class+CoreDataProperties.swift */; };
@@ -61,6 +62,7 @@
 		1AD464DE1C14B117006F4DAE /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1AD464E01C14B130006F4DAE /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		1ADDB66D1C15FB2100D05F75 /* DecksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecksController.swift; path = ../DecksController.swift; sourceTree = "<group>"; };
+		1ADDB66F1C16110700D05F75 /* DeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 		1AE1FC4B1C0CC7660023CACC /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		66C39A4E02BCF78F9EB321E3 /* Pods-hearthstonefinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hearthstonefinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hearthstonefinder/Pods-hearthstonefinder.debug.xcconfig"; sourceTree = "<group>"; };
 		821A8B7214580A5C0672E170 /* Pods-hearthstonefinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hearthstonefinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-hearthstonefinder/Pods-hearthstonefinder.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AE088C31C19E4F5002FF0AF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A95BA601C0F32D70093D755 /* ClassCell.swift */,
+				1A95BA5A1C0F32A40093D755 /* SetCell.swift */,
+				1AE1FC4B1C0CC7660023CACC /* CardCell.swift */,
+				1AD464D81C14A679006F4DAE /* DeckCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1AE088C51C19E52B002FF0AF /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A95BA581C0F32980093D755 /* MyCardsController.swift */,
+				1A95BA5E1C0F32B00093D755 /* ClassController.swift */,
+				1A95BA5C1C0F32AA0093D755 /* SetController.swift */,
+				1ADDB66D1C15FB2100D05F75 /* DecksController.swift */,
+			);
+			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
 		99B6D90C2112CFF073677E1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,18 +186,13 @@
 		A7FE552F1BEFFE2700ABC506 /* hearthstonefinder */ = {
 			isa = PBXGroup;
 			children = (
-				1A95BA601C0F32D70093D755 /* ClassCell.swift */,
-				1ADDB66D1C15FB2100D05F75 /* DecksController.swift */,
 				A7FE55301BEFFE2700ABC506 /* AppDelegate.swift */,
-				A7FE55341BEFFE2700ABC506 /* Main.storyboard */,
-				1AD464D81C14A679006F4DAE /* DeckCell.swift */,
-				1AE1FC4B1C0CC7660023CACC /* CardCell.swift */,
-				1A95BA5A1C0F32A40093D755 /* SetCell.swift */,
+				1ADDB66F1C16110700D05F75 /* DeckViewController.swift */,
 				A7FE55321BEFFE2700ABC506 /* DownloadController.swift */,
+				1AE088C31C19E4F5002FF0AF /* Cells */,
+				1AE088C51C19E52B002FF0AF /* TableViewControllers */,
+				A7FE55341BEFFE2700ABC506 /* Main.storyboard */,
 				A7FE553A1BEFFE2700ABC506 /* Assets.xcassets */,
-				1A95BA5C1C0F32AA0093D755 /* SetController.swift */,
-				1A95BA5E1C0F32B00093D755 /* ClassController.swift */,
-				1A95BA581C0F32980093D755 /* MyCardsController.swift */,
 				A7FE553F1BEFFE2700ABC506 /* Info.plist */,
 				A7FE55371BEFFE2700ABC506 /* hearthstonefinder.xcdatamodeld */,
 				1A95BA621C0F93A80093D755 /* hearthstonefinder-Bridging-Header.h */,
@@ -405,6 +424,7 @@
 				A7FE55311BEFFE2700ABC506 /* AppDelegate.swift in Sources */,
 				A74491461BF1566B00768CE2 /* Card.swift in Sources */,
 				1AE1FC4C1C0CC7660023CACC /* CardCell.swift in Sources */,
+				1ADDB6701C16110700D05F75 /* DeckViewController.swift in Sources */,
 				A74491471BF1566B00768CE2 /* Set+CoreDataProperties.swift in Sources */,
 				1ADDB66E1C15FB2100D05F75 /* DecksController.swift in Sources */,
 			);
