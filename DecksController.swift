@@ -19,6 +19,7 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
     var cardResultsController: NSFetchedResultsController = NSFetchedResultsController()
     var allCards: [Card] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,22 +38,30 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
             try fetchedResultsController.performFetch()
         } catch _ {
         }
-        do {
-            try cardResultsController.performFetch()
-        } catch _ {
+        for d in fetchedResultsController.fetchedObjects! {
+            self.getCardsData(d as! Deck)
         }
-        allCards = cardResultsController.fetchedObjects as! [Card]
     }
 
     func getCardsData(deck: Deck){
         
-        var classCheck = true;
-        if let _ = deck.classRelation{
-            classCheck = false;
+        var classCheck = true
+        
+        if (deck.card1!.count != 0 || deck.card2!.count != 0) {
+            return
+        }
+        
+        if (allCards.isEmpty) {
+            do {
+                try cardResultsController.performFetch()
+            } catch _ {
+            }
+            allCards = cardResultsController.fetchedObjects as! [Card]
         }
         
         let separators = NSCharacterSet(charactersInString: ":;")
         let ids = deck.idList
+        
         // Split based on characters.
         let parts = ids!.componentsSeparatedByCharactersInSet(separators)
             for(var i = 0; (i+1) < parts.count; ++i){
@@ -62,29 +71,35 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
                         if(count.containsString("1")){
                             if let found = (allCards.filter(){ $0.cardId! == card })[0] as Card?{
                                 deck.addCard1(found)
-                                print(found.name)
+                                print(found.name!)
                                 if(classCheck){
                                     if let hero = found.hero{
                                         deck.classRelation = hero;
                                         classCheck = false;
                                     }
                                 }
+                                self.save()
                             }
                         }else if(count.containsString("2")){
                             if let found = (allCards.filter(){ $0.cardId! == card })[0] as Card?{
-                                deck.addCard1(found)
-                                print(found.name)
+                                deck.addCard2(found)
+                                print(found.name!)
                                 if(classCheck){
                                     if let hero = found.hero{
                                         deck.classRelation = hero;
                                         classCheck = false;
                                     }
                                 }
+                                self.save()
                             }
                         }
                     }
                 }
         }
+        self.save()
+        self.tableView.reloadData()
+    }
+    func save(){
         do{
             try self.managedObjectContext.save()
         } catch _ as NSError {
@@ -133,11 +148,22 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DeckCell
         let d = fetchedResultsController.objectAtIndexPath(indexPath) as! Deck
-        
-        
+       
         cell.name.text = d.name
         //getCardsData(d)
         d.dustCost()
+        cell.dust.text = "\(d.dust!)"
+        
+        if let image = d.classRelation?.image{
+            cell.heroImage.kf_setImageWithURL(NSURL(string: image)!)
+        } else {
+            cell.heroImage.image = UIImage(named:"titleimg")
+        }
+        
+        
+        cell.heroImage.alpha = 0.6
+        cell.heroImage.layer.contentsRect = CGRectMake(0.25, 0.25, 0.50, 0.1);
+        
         //cell.dust.text = d.dust
         return cell
     }
@@ -179,12 +205,12 @@ class DecksController: UITableViewController , NSFetchedResultsControllerDelegat
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "passDeck"{
-            let secondViewController : DeckViewController = segue.destinationViewController as! DeckViewController
+            let secondViewController : DeckController = segue.destinationViewController as! DeckController
             
             let indexPath = self.tableView.indexPathForSelectedRow //get index of data for selected row
             
             let d = fetchedResultsController.objectAtIndexPath(indexPath!) as! Deck
-            secondViewController.passData = d // get data by index and pass it to second view controller
+            secondViewController.passData = d.name // get data by index and pass it to second view controller
             
         }
     }

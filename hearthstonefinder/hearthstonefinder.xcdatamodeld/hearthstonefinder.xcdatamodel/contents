@@ -18,14 +18,15 @@
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="decks1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Deck" inverseName="card1" inverseEntity="Deck" syncable="YES"/>
-        <relationship name="decks2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="card2" inverseEntity="Deck" syncable="YES"/>
+        <relationship name="decks2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Deck" inverseName="card2" inverseEntity="Deck" syncable="YES"/>
         <relationship name="hero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" inverseName="cards" inverseEntity="Class" syncable="YES"/>
         <relationship name="set" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Set" inverseName="cards" inverseEntity="Set" syncable="YES"/>
     </entity>
     <entity name="Class" representedClassName=".Class" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="hero" inverseEntity="Card" syncable="YES"/>
-        <relationship name="decks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="classRelation" inverseEntity="Deck" syncable="YES"/>
+        <relationship name="decks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Deck" inverseName="classRelation" inverseEntity="Deck" syncable="YES"/>
     </entity>
     <entity name="Deck" representedClassName="Deck" syncable="YES">
         <attribute name="dust" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -44,7 +45,7 @@
     </entity>
     <elements>
         <element name="Card" positionX="52" positionY="-93" width="128" height="345"/>
-        <element name="Class" positionX="-126" positionY="-90" width="128" height="90"/>
+        <element name="Class" positionX="-126" positionY="-90" width="128" height="105"/>
         <element name="Deck" positionX="-315" positionY="-22" width="128" height="165"/>
         <element name="Set" positionX="-180" positionY="117" width="128" height="90"/>
     </elements>

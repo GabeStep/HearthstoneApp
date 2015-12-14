@@ -15,7 +15,7 @@ import CoreData
 extension Class {
 
     @NSManaged var name: String?
-    @NSManaged var all: NSManagedObject?
+    @NSManaged var image: String?
     @NSManaged var cards: NSSet?
 
 }

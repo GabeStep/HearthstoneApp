@@ -19,16 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Setup parse
         Parse.enableLocalDatastore()
-        
-        
         Parse.setApplicationId("oulCfSPxiHyg3adcB5G2c2Fk1T6V3OQfD8OKRsM5", clientKey: "ZaN1NiTA7QuIcocKUei3jqnSHvJxwSnkHFAo9v2X")
         
-        
-        
-        
-        
         return true
+    }
+    
+    func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
 
     func applicationWillResignActive(application: UIApplication) {

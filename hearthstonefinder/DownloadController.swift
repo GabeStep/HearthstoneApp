@@ -13,19 +13,22 @@ import SwiftHTTP
 import SwiftyJSON
 
 class DownloadController: UIViewController {
+    var cardsEnabled = false
+    var decksEnabled = false
     
+    @IBOutlet weak var update: UIButton!
     //Array for classes
     var classes = Dictionary<String,Class>()
     
     //Cards
-    var allCards = Dictionary<String,Card>()
+    var allCards: [Card] = []
     
     // error list
     enum errors : ErrorType {
         case fetchError
     }
     
-    func downloadDecks(){
+    func downloadDecks() {
         let query = PFQuery(className:"decks")
         query.findObjectsInBackgroundWithBlock {
             (decks: [PFObject]?, error: NSError?) -> Void in
@@ -47,6 +50,18 @@ class DownloadController: UIViewController {
         }
     }
     
+    func save(){
+        do{
+            try self.moc.save()
+        } catch _ as NSError {
+            print("error with core data card save")
+        }
+    }
+
+    func updateData() {
+        
+    }
+    
     // object to keep the same managed object context
     let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
@@ -59,13 +74,20 @@ class DownloadController: UIViewController {
                 throw errors.fetchError
             }
             if cardResult.count == 0{
-                self.getCards()
+                self.getCards(){ (response) in
+                    if response{
+                        self.cardsEnabled = true
+                        self.decksEnabled = true
+                    }
+                }
             } else {
                 print("cards found: \(cardResult.count)")
+                self.cardsEnabled = true;
             }
         } catch {
             print("fetch error:")
         }
+        
         do{
             guard let deckResult = try self.moc.executeFetchRequest(deckRequest) as? [Deck] else {
                 throw errors.fetchError
@@ -74,6 +96,7 @@ class DownloadController: UIViewController {
                 self.downloadDecks()
             } else {
                 print("Decks found: \(deckResult.count)")
+                self.decksEnabled = true
             }
         } catch {
             print("fetch error:")
@@ -83,10 +106,8 @@ class DownloadController: UIViewController {
         // unlock buttons
     }
     
-    //function to grab cards json from mashape api
-    // needs revision to meet security thingys
-    // right now I just added thingy to info.plist to allow
-    func getCards(){
+    // function to grab cards json from mashape api
+    func getCards(callback: Bool -> ()){
         
         do {
             let opt = try HTTP.GET("https://omgvamp-hearthstone-v1.p.mashape.com/cards?collectible=1", headers: ["X-Mashape-Key": "EoiFVOryjymshhQcApwmhvoGBGRIp1Br4khjsnlCIqJTVvsSph"])
@@ -94,13 +115,14 @@ class DownloadController: UIViewController {
                 print(response)
                 let d = NSData(data: response.data)
                 self.parseCards(d)
+                callback(true)
             }
         } catch let error {
+            callback(true)
             print("couldn't serialize the paraemeters: \(error)")
         }
     }
-    
-    // core data saving
+        // core data saving
     
     func saveDeck(deck: PFObject){
         if let name = deck["name"] {
@@ -108,7 +130,7 @@ class DownloadController: UIViewController {
             if let ids = deck["idList"] as! String?{
                 newDeck.idList = ids
             }
-            if let link = deck["link"] as! String?{
+            if let link = deck["deckLink"] as! String?{
                 newDeck.link = link
             }
             if let tier = deck["tier"] as! String?{
@@ -119,7 +141,19 @@ class DownloadController: UIViewController {
         }
     }
     
+    override func shouldAutorotate() -> Bool {
+        // Lock autorotate
+        return false
+    }
     
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
+        // Only allow Portrait
+        return UIInterfaceOrientation.Portrait
+    }
     
     // function to parse out the card call.
     func parseCards(data: NSData){
@@ -134,10 +168,13 @@ class DownloadController: UIViewController {
             for (_,inner):(String, JSON) in subJson {
                 let c = self.toCard(inner, currentSet: cs)
                 if(c.cardId != "ERROR"){
-                    allCards[c.cardId!] = c;
+                    allCards.append(c);
                 }else{
                     moc.deleteObject(c)
                 }
+            }
+            if(cs.cards?.count == 0){
+                moc.deleteObject(cs)
             }
         }
         
@@ -155,9 +192,31 @@ class DownloadController: UIViewController {
     // Convert Dictionary to Card Class instance
     // not sure if necesary just doing it for now
     func toCard(c: JSON, currentSet: Set) -> Card{
+        if let t = c["type"].string{
+            if t == "Hero"{
+                if let s = c["cardSet"].string{
+                    if s == "Basic" {
+                        if let x = c["playerClass"].string{
+                            if let hero = classes[x]{
+                                if let image = c["img"].string{
+                                    hero.image = image
+                                }
+                            }else{
+                                self.createClass(x)
+                                if let image = c["img"].string{
+                                    classes[x]!.image = image
+                                }
+                            }
+                        }
+                    }
+                }
+                return Card.createInManagedObjectContext(moc, cardID: "ERROR")
+            }
+        }
         if let y = c["cardId"].string{
             let newCard = Card.createInManagedObjectContext(moc, cardID: y)
             newCard.set = currentSet
+
             if let x = c["cost"].number{
                 newCard.cost = x
             }
@@ -217,6 +276,16 @@ class DownloadController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if(self.decksEnabled && identifier == "decks"){
+            return true
+        }
+        if(self.cardsEnabled && identifier == "cards"){
+            return true
+        }
+        return false
     }
 
 
